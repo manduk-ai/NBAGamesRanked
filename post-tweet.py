@@ -98,11 +98,6 @@ consumer_secret = os.environ['CONSUMER_SECRET']
 access_token = os.environ['ACCESS_TOKEN']
 access_token_secret = os.environ['ACCESS_TOKEN_SECRET']
 
-print("Consumer Key: ", consumer_key)
-print("Consumer Secret: ", consumer_secret)
-print("Access Token: ", access_token)
-print("Access Token Secret: ", access_token_secret)
-
 # authenticate
 client = tweepy.Client(
     consumer_key=consumer_key,
@@ -110,7 +105,6 @@ client = tweepy.Client(
     access_token=access_token,
     access_token_secret=access_token_secret
 )
-print(client)
 
 # posting
 try:
