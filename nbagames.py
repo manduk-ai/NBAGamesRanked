@@ -318,13 +318,13 @@ class NBAGamesScoringCalculator(NBAGamesDataCollector):
         elif no_OT == 2:
             scoring += 29
         elif no_OT == 1:
-            scoring += 28
+            scoring += 27
         elif points_diff == 1:
-            scoring += 23
+            scoring += 27
         elif points_diff > 1 and points_diff <= 3:
-            scoring += 20
+            scoring += 25
         elif points_diff > 3 and points_diff <= 6:
-            scoring += 15
+            scoring += 19
         elif points_diff > 6 and points_diff <= 10:
             scoring += 8
         elif points_diff > 10 and points_diff <= 15:
@@ -361,12 +361,14 @@ class NBAGamesScoringCalculator(NBAGamesDataCollector):
             scoring += int(row['Playoff'])
 
         # We add some point if there was exception indivudual scoring
-        if row['Highest pts'] > 50:
+        if row['Highest pts'] >= 55:
             scoring += 15
-        elif row['Highest pts'] >= 45:
+        elif row['Highest pts'] >= 48:
             scoring += 10
-        elif row['Highest pts'] >= 40:
+        elif row['Highest pts'] >= 45:
             scoring += 5
+        elif row['Highest pts'] >= 40:
+            scoring += 3
 
         # maximum score is max_scoring. We want to normalize it to get 0 - 100 score easily to understand
         # PLAYOFF2021
@@ -404,7 +406,7 @@ def print_scoring_html_styled(games):
     </html>
     '''
 
-    with open(r"c:\temp\scoring_styled.html", "w") as f:
+    with open(r"c:\tmp\scoring_styled.html", "w") as f:
         f.write(html_string_start)
         f.write(r'<table class="greenTable"><thead><tr>')
         for header in score_df.columns.values:
@@ -422,7 +424,7 @@ def print_scoring_html_styled(games):
 
 # this function returns simple html with all data
 def print_scoring_html_plain(games):
-    with open(r"c:\temp\scoring.html", "w") as p:
+    with open(r"c:\tmp\scoring.html", "w") as p:
         p.write(games.sort_values(by=['SCORE: 0 - 100'], ascending=False).to_html())
 
 
@@ -453,4 +455,4 @@ def print_scoring_csv(games, date: str = "", playoff_mode = False):  # PLAYOFF20
 def print_scoring_json(games):
     games[['Visitor', 'Host', 'SCORE: 0 - 100']].copy()\
         .sort_values(by=['SCORE: 0 - 100'], ascending=False) \
-        .to_json(r'c:\temp\scoring.json', orient='records', lines=True)
+        .to_json(r'c:\tmp\scoring.json', orient='records', lines=True)
