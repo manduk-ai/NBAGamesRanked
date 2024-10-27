@@ -17,6 +17,4 @@ A high level overview of the installation process:
 6. Set up a cron job to run 'nba_games_ranked.py' and 'tweet_ranking.py' scripts. The latter should run after the former finishes, so give it a few minutes head start.
 
 ## Licensing
-This project utilizes a dual licensing model:
-- GNU GPL v3.0: This open-source license permits commercial use but mandates that any derivatives also be distributed under the same terms.
-- Commercial License: Intended for proprietary applications without the obligation to release the source code. For commercial licensing inquiries, please contact ma at manduk.ai.
+This project and its code are available for personal use only. Individuals may use it solely on their personal devices. No results, outputs, or derived works may be published, shared, or distributed on any platform or in any form. For any use beyond personal purposes, please contact manduk.ai.
