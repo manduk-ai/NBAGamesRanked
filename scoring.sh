@@ -1,7 +1,7 @@
 # Activate the venv environment
-source /home/ec2-user/nba_venv/bin/activate
+source /home/ubuntu/nba_venv/bin/activate
 
-# Run your Python script
+# Run Python script that calculates the scoring of NBA games
 python nba_games_scoring.py
 
 # Deactivate the environment
