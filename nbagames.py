@@ -4,9 +4,7 @@ Definition of 2 main classes for NBA Games Ranked app:
 2) NBAGamesScoringCalculator: calculates ranking
 3) Plus some helper methods and functions outside of the classes.
 
-Author: Szymon Manduk
-
-Created: Feb-2020
+Author: Szymon Manduk, manduk.ai
 """
 
 import datetime

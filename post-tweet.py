@@ -1,9 +1,11 @@
 """
 Script posts tweets with the current NBA games ranking.
+
 To be executed as cron process on a server.
-Author: AI Geek Programmer
-Date: Apr-2020
+
+Author: Szymon Manduk, manduk.ai
 """
+
 import tweepy
 import datetime
 import pandas as pd

@@ -7,10 +7,9 @@ Saves it in CSV files.
 
 Script should be executed as a cron process.
 
-Author: Szymon Manduk AI
-
-Created: Feb-2020
+Author: Szymon Manduk, manduk.ai
 """
+
 import datetime
 import pandas as pd
 import nbagames as nba  
