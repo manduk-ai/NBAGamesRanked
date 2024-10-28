@@ -54,6 +54,9 @@ time_et = time_utc.astimezone(eastern).strftime('%H:%M')
 
 post_options = [
     "",
+    "",
+    "",
+    "",
     "Tips welcome: https://ko-fi.com/nbagamesranked" + "\n\n",
     "Please support this service by retweet and like\n\n"
 ]
