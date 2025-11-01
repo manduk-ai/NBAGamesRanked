@@ -3,7 +3,7 @@ Script posts tweets with the current NBA games ranking.
 
 To be executed as cron process on a server.
 
-Author: Szymon Manduk, manduk.ai
+Author: Szymon Manduk
 """
 
 import tweepy

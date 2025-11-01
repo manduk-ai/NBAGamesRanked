@@ -4,7 +4,7 @@ Definition of 2 main classes for NBA Games Ranked app:
 2) NBAGamesScoringCalculator: calculates ranking
 3) Plus some helper methods and functions outside of the classes.
 
-Author: Szymon Manduk, manduk.ai
+Author: Szymon Manduk
 """
 
 import datetime
@@ -33,7 +33,7 @@ class NBAGamesDataCollector:
         self.request_games = None
         self.request_team = None
         self.url_games = "https://api-nba-v1.p.rapidapi.com/games/date/"
-        self.url_team = "https://api-nba-v1.p.rapidapi.com/standings/standard/2024/teamId/"
+        self.url_team = "https://api-nba-v1.p.rapidapi.com/standings/standard/2025/teamId/"
         self.url_stats = "https://api-nba-v1.p.rapidapi.com/statistics/players/gameId/"
         self.games_df = pd.DataFrame()
 
@@ -56,7 +56,7 @@ class NBAGamesDataCollector:
 
         # We need to call another API to try te find out if there were any OTs in a game
         try:
-            querystring = {"season":"2024-2025","league":"12","date":str(date)}
+            querystring = {"season":"2025-2026","league":"12","date":str(date)}
 
             response = requests.get(
                 self.url_games_api_basketball, 

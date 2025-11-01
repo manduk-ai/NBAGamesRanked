@@ -7,7 +7,7 @@ Saves it in CSV files.
 
 Script should be executed as a cron process.
 
-Author: Szymon Manduk, manduk.ai
+Author: Szymon Manduk
 """
 
 import datetime
