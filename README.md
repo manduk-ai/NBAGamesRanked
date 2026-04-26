@@ -1,4 +1,9 @@
 ## NBA Games Ranked
+
+**Note: This project has been archived and is inactive as of April 2026.**
+
+> For similar results using AI instead of the original script, see [prompt.md](prompt.md).
+
 NBA Games Ranked is a free service that tweets a ranking of the previous day's NBA games, without revealing the final scores. It's designed to help NBA fans in non-American time zones find and watch the most exciting games. Follow me on Twitter: @NBAGamesRanked.
 
 ![Example Tweet](example-tweet.jpg)
